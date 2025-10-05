@@ -1,0 +1,10 @@
+﻿# Ubuntu Panel 閰嶇疆鏂囦欢
+host: 0.0.0.0
+port: 7800
+data_dir: ./data
+log_level: info
+log_file: ./ubuntu-panel.log
+jwt_secret: default_secret_key
+session_timeout: 86400
+docker_enabled: true
+docker_socket: /var/run/docker.sock

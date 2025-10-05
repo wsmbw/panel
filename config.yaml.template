@@ -1,0 +1,60 @@
+# Ubuntu Panel 配置文件
+
+# 服务器配置
+host: 0.0.0.0  # 监听地址，0.0.0.0 表示监听所有网卡
+port: 7800     # 监听端口
+
+# 数据目录
+data_dir: /opt/ubuntu-panel/data  # 数据存储目录
+
+# 日志配置
+log_level: info  # 日志级别: debug, info, warn, error
+log_file: /var/log/ubuntu-panel/ubuntu-panel.log  # 日志文件路径
+
+# 安全配置
+jwt_secret: your_secret_key_here  # JWT签名密钥，请修改为安全的随机字符串
+session_timeout: 86400  # 会话超时时间（秒），默认24小时
+
+# Docker配置
+docker_enabled: true  # 是否启用Docker管理功能
+docker_socket: /var/run/docker.sock  # Docker套接字路径
+
+# 文件管理配置
+file_manager:
+  enabled: true  # 是否启用文件管理功能
+  root_dir: /    # 文件管理根目录
+  allow_remote_download: false  # 是否允许远程下载文件
+
+# 备份配置
+backup:
+  enabled: true  # 是否启用自动备份
+  interval: 86400  # 备份间隔（秒），默认24小时
+  retention_days: 7  # 备份保留天数
+
+# 安全设置
+security:
+  login_attempt_limit: 5  # 登录失败次数限制
+  login_attempt_lock_time: 300  # 登录失败锁定时间（秒）
+  ssl_enabled: false  # 是否启用SSL
+  ssl_cert: /path/to/cert.pem  # SSL证书路径
+  ssl_key: /path/to/key.pem  # SSL私钥路径
+
+# 邮件通知配置
+email:
+  enabled: false  # 是否启用邮件通知
+  smtp_host: smtp.example.com  # SMTP服务器地址
+  smtp_port: 587  # SMTP服务器端口
+  smtp_username: user@example.com  # SMTP用户名
+  smtp_password: password  # SMTP密码
+  from_address: noreply@example.com  # 发件人地址
+
+# 监控配置
+monitoring:
+  system:
+    enabled: true  # 是否启用系统监控
+    interval: 60  # 监控间隔（秒）
+  alert:
+    enabled: false  # 是否启用告警
+    cpu_threshold: 90  # CPU使用率告警阈值
+    memory_threshold: 90  # 内存使用率告警阈值
+    disk_threshold: 90  # 磁盘使用率告警阈值

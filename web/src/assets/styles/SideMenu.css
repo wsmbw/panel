@@ -1,0 +1,70 @@
+.side-menu {
+  overflow: hidden;
+  background: #fff;
+}
+
+.logo-container {
+  height: 64px;
+  padding: 16px;
+  background: #1890ff;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.logo .anticon {
+  margin-right: 8px;
+  font-size: 24px;
+}
+
+.logo.collapsed {
+  justify-content: center;
+}
+
+.logo.collapsed .anticon {
+  margin-right: 0;
+}
+
+.logo.collapsed span {
+  display: none;
+}
+
+.main-menu {
+  padding-top: 0;
+}
+
+.ant-menu.ant-menu-inline .ant-menu-item {
+  padding-left: 24px;
+}
+
+.ant-menu.ant-menu-inline .ant-menu-item-selected {
+  background-color: #e6f7ff;
+  border-right: 3px solid #1890ff;
+}
+
+.ant-menu.ant-menu-inline .ant-menu-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .logo-container {
+    justify-content: center;
+  }
+  
+  .logo span {
+    display: none;
+  }
+  
+  .logo .anticon {
+    margin-right: 0;
+  }
+}

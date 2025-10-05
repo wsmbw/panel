@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "???Ubuntu Panel???..."
+mkdir -p data
+if [ ! -f config.yaml ]; then
+    cp config.yaml.template config.yaml
+    echo "??????????????
+fi
+./ubuntu-panel --config config.yaml
